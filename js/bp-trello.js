@@ -385,10 +385,6 @@ UPDATED
 
 						//count items toComplete?
 						if(bp.user.countCheckListsTowardsComplete){
-						//yes
-							toMax++; //count card as 1
-							if(inComplete){ toComplete++; } //if card is in complete list, count it.
-
 							//loop through each checklist item
 							for(var a = 0, aa = checklistItems.length; a < aa; a++){
 								//toMax + 1
