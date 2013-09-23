@@ -380,8 +380,9 @@ UPDATED
 				//count checklists?
 				if(bp.user.countCheckLists){
 					//loop through each checklist for this card
-					for(var i = 0, ii = _cards[cardID].checklistList.length; i < ii; i++){
-						var checklistItems = _cards[cardID].checklistList.models[i].attributes.checkItems; //cache
+					var checkListsExceptSpecs = _cards[cardID].checklistList.models.filter(function(e) {return e.attributes.name != "Specs" && e.attributes.name != "Acceptance criteria"});
+					for(var i = 0, ii = checkListsExceptSpecs.length; i < ii; i++){
+						var checklistItems = checkListsExceptSpecs[i].attributes.checkItems; //cache
 
 						//count items toComplete?
 						if(bp.user.countCheckListsTowardsComplete){
