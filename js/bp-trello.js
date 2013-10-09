@@ -362,7 +362,7 @@ UPDATED
 		for(var listID in _lists){
 			if(!_lists.hasOwnProperty(listID)){ continue; } //skip if not a list
 			if(_lists[listID].attributes.closed){ continue; } //skip if the list is closed
-			if(_lists[listID].attributes.name.indexOf('[x]') == -1 || _lists[listID].attributes.name.indexOf('[X]') == -1) { continue;}
+			if(_lists[listID].attributes.name.indexOf('[x]') != -1 || _lists[listID].attributes.name.indexOf('[X]') != -1) { continue;}
 
 			//loop through each card
 			for(var cardID in _cards){
